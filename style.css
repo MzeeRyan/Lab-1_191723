@@ -1,0 +1,258 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8f0;
+    color: #5a3e36;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f4e3d7;
+    padding: 20px 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fbe5d6;
+    padding: 10px;
+}
+
+nav a {
+    margin: 5px 15px;
+    text-decoration: none;
+    color: #5a3e36;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #d2691e;
+    outline: 2px solid #d2691e;
+    outline-offset: 2px;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.banner {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #d3bfa6;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4e3d7;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f1e7;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background-color: #b85c1c;
+    outline: 2px solid #b85c1c;
+    outline-offset: 2px;
+}
+
+::placeholder {
+    color: #a58a7a;
+    font-style: italic;
+}
+
+.about-section {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background-color: #fff7f0;
+}
+
+.section-title {
+    color: #d16b86;
+}
+
+.subheading {
+    color: #d16b86;
+}
+
+.contact-link {
+    color: #d16b86;
+    text-decoration: underline;
+}
+
+.gallery-section {
+    padding: 2rem;
+    background-color: #fff7f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox effect */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f1e7;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h2 {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #5a3e36;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #d2691e;
+}
+
+.menu-item button {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-item button:hover {
+    background-color: #b85c1c;
+}
+
+
+@media (max-width: 600px) {
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .banner,
+    .gallery-img {
+        max-width: 100%;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        max-width: 100%;
+    }
+}

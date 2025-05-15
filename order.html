@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Place Your Order - Happiness in a Bite</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+  <h1>Place Your Order</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main class="section">
+  <h2>Let's Bake Something Special!</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST" class="order-form">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="product">Select Product:</label><br>
+    <select id="product" name="product" required>
+      <option value="">--Please choose--</option>
+      <option value="Original Cinnamon rolls">Original Cinnamon rolls</option>
+      <option value="Orange Muffins">Orange Muffins</option>
+      <option value=" Raspberry Muffins">Raspberry Muffins</option>
+      <option value="Blueberry Muffins">Blueberry Muffins</option>
+      <option value="Pineaple and Coconut Muffins">Pineaple and Coconut Muffins</option>
+      <option value="Vanilla Muffins">Vanilla Muffins</option>
+      <option value="Orange Muffins">Orange Muffins</option>
+      <option value="White chocolate Chip Muffins">White Chocolate chip Muffins</option>
+      <option value="Chocolate Chip cookies">Lemon and Lime Muffins</option>
+      <option value="Chocolate Cinnamon rolls">Chocolate Cinnamon rolls</option>
+      <option value="Custom Order">Custom Order</option>
+    </select><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+    <label for="message">Special Requests or Notes:</label><br>
+    <textarea id="message" name="message" rows="4" placeholder="E.g. I need it delivered on Friday morning."></textarea><br><br>
+
+    <button type="submit" class="cta-button">Submit Order</button>
+  </form>
+
+  <p>Prefer WhatsApp? <a href="https://wa.me/254758962299?text=Hi!%20I'd%20like%20to%20place%20an%20order%20from%20Happiness%20in%20a%20Bite" class="cta-button">Order via WhatsApp</a></p>
+</main>
+
+<footer>
+  <p>Contact us: 0758-962-299 | happinessinabite@gmail.com</p>
+  <p>Follow us on Instagram & Facebook</p>
+  <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const item = params.get('item');
+
+  if (item) {
+    const select = document.getElementById('product');
+    for (let option of select.options) {
+      if (option.value.toLowerCase() === item.toLowerCase()) {
+        option.selected = true;
+        break;
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
