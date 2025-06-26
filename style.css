@@ -1,34 +1,36 @@
+/* ===== BASE STYLES ===== */
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #fff8f0;
     color: #5a3e36;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
-    text-align: center;
     background-color: #f4e3d7;
-    padding: 20px 10px;
+    padding: 20px;
+    text-align: center;
 }
 
 .logo {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
 nav {
+    background-color: #fbe5d6;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #fbe5d6;
-    padding: 10px;
 }
 
 nav a {
-    margin: 5px 15px;
-    text-decoration: none;
     color: #5a3e36;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
 
@@ -42,87 +44,121 @@ nav a:focus {
 main {
     padding: 20px;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.banner {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+.section {
+    background-color: #fff7f0;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+form {
+    background: #f9f1e7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-table, th, td {
-    border: 1px solid #d3bfa6;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f4e3d7;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f1e7;
-}
-
+input, 
+select, 
+textarea,
 form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    margin: 5px 0 15px;
+    border: 1px solid #d3bfa6;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s;
 }
 
-form input[type="submit"] {
-    background-color: #d2691e;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover,
-form input[type="submit"]:focus {
-    background-color: #b85c1c;
-    outline: 2px solid #b85c1c;
-    outline-offset: 2px;
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #d2691e;
+    outline: none;
 }
 
 ::placeholder {
     color: #a58a7a;
     font-style: italic;
+    opacity: 1;
 }
 
-.about-section {
-    font-family: Arial, sans-serif;
-    padding: 2rem;
-    background-color: #fff7f0;
+.cta-button, 
+form input[type="submit"],
+.menu-item button {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.section-title {
+.cta-button:hover,
+.cta-button:focus,
+form input[type="submit"]:hover,
+form input[type="submit"]:focus,
+.menu-item button:hover,
+.menu-item button:focus {
+    background-color: #b85c1c;
+    outline: 2px solid #b85c1c;
+    outline-offset: 2px;
+}
+
+.error {
     color: #d16b86;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 15px;
 }
 
-.subheading {
-    color: #d16b86;
+.valid {
+    border-color: #5a8f5a !important;
 }
 
-.contact-link {
-    color: #d16b86;
-    text-decoration: underline;
+.invalid {
+    border-color: #d16b86 !important;
+}
+
+.password-container {
+    position: relative;
+    max-width: 400px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+    color: #a58a7a;
+    user-select: none;
+}
+
+.strength-meter {
+    height: 5px;
+    margin: -10px 0 15px;
+    background: #d3bfa6;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background-color 0.3s;
 }
 
 .gallery-section {
@@ -149,11 +185,12 @@ form input[type="submit"]:focus {
     cursor: pointer;
 }
 
-.gallery-img:hover {
+.gallery-img:hover,
+.gallery-img:focus {
     transform: scale(1.05);
+    outline: none;
 }
 
-/* Lightbox effect */
 .lightbox {
     display: none;
     position: fixed;
@@ -196,8 +233,10 @@ form input[type="submit"]:focus {
     text-align: center;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.menu-item:focus-within {
     transform: scale(1.02);
+    outline: none;
 }
 
 .menu-item img {
@@ -209,8 +248,10 @@ form input[type="submit"]:focus {
     cursor: pointer;
 }
 
-.menu-item img:hover {
+.menu-item img:hover,
+.menu-item img:focus {
     transform: scale(1.05);
+    outline: none;
 }
 
 .menu-item h2 {
@@ -224,35 +265,274 @@ form input[type="submit"]:focus {
     color: #d2691e;
 }
 
-.menu-item button {
-    background-color: #d2691e;
+footer {
+    background: #5a3e36;
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
-
-.menu-item button:hover {
-    background-color: #b85c1c;
-}
-
 
 @media (max-width: 600px) {
     nav a {
         margin: 5px;
         font-size: 14px;
     }
-
-    .banner,
-    .gallery-img {
-        max-width: 100%;
-    }
-
+    
+    input, 
+    select, 
+    textarea,
+    .password-container,
+    .strength-meter,
     form input[type="text"],
     form input[type="email"],
     form textarea {
         max-width: 100%;
     }
+    
+    .section {
+        padding: 1rem;
+    }
+    
+    .banner,
+    .gallery-img {
+        max-width: 100%;
+    }
+}
+
+.login-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f9f1e7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #d2691e;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #5a3e36;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5a3e36;
+}
+
+.text-link {
+  color: #d2691e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.text-link:hover {
+  color: #b85c1c;
+  text-decoration: underline;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d3bfa6;
+  color: #5a3e36;
+}
+
+.nav-login {
+  margin-left: auto; 
+}
+
+.nav-login a {
+  background-color: #d2691e;
+  color: white !important;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.nav-login a:hover {
+  background-color: #b85c1c;
+}
+
+/* Profile dropdown */
+.user-profile {
+  margin-left: auto;
+  position: relative;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d2691e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #f9f1e7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 200px;
+  z-index: 100;
+}
+
+.user-profile:hover .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 8px 0;
+  color: #5a3e36;
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+  color: #d2691e;
+}
+
+/* Add to your existing nav styles */
+.nav-auth {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide profile dropdown by default */
+.user-profile {
+  display: none;
+}
+
+/* Hide login link when logged in */
+.logged-in .nav-login {
+  display: none;
+}
+
+/* Show profile when logged in */
+.logged-in .user-profile {
+  display: block;
+}
+
+/* Remember me checkbox */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #a58a7a;
+  margin-top: 5px;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Social Login Styles */
+.social-login {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  color: #a58a7a;
+  margin: 1rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d3bfa6;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  padding: 10px 15px;
+  border: 1px solid #d3bfa6;
+  border-radius: 5px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.social-btn:hover {
+  background: #f9f1e7;
+}
+
+.social-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Add to style.css */
+.feedback-message {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  display: none;
+}
+
+.feedback-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Loading state */
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
 }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Happiness in a Bite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+    <h1>Join Our Sweet Community</h1>
+  </header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <main class="section">
+    <div class="form-container">
+      <h2>Create Account</h2>
+      
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-phone">Phone</label>
+          <input type="tel" id="reg-phone" name="phone" placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <div class="password-container">
+            <input type="password" id="reg-password" name="password" required>
+            <span class="toggle-password" onclick="togglePassword('reg-password')">👁️</span>
+          </div>
+          <div class="strength-meter">
+            <div class="strength-meter-fill"></div>
+          </div>
+          <p class="hint">Minimum 8 characters with uppercase, number, and special character</p>
+        </div>
+        
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="newsletter" checked> 
+            Receive sweet offers and updates
+          </label>
+        </div>
+        
+        <button type="submit" class="cta-button">Create Account</button>
+        
+        <p class="login-link">Already have an account? <a href="login.html">Sign in</a></p>
+        <!-- Add this right before the closing </form> tag -->
+<div id="registrationFeedback" class="feedback-message" style="display: none;"></div>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form values
+  const formData = {
+    name: document.getElementById('reg-name').value,
+    email: document.getElementById('reg-email').value,
+    password: document.getElementById('reg-password').value
+  };
+
+  // Simulate registration (replace with actual API call)
+  setTimeout(() => {
+    // Show success message
+    const feedbackEl = document.getElementById('registrationFeedback');
+    feedbackEl.textContent = 'Registration successful! Redirecting...';
+    feedbackEl.style.display = 'block';
+    feedbackEl.className = 'feedback-message success';
+    
+    // Store registration in localStorage
+    localStorage.setItem('currentUser', JSON.stringify(formData));
+    localStorage.setItem('isLoggedIn', 'true');
+    
+    // Redirect after 2 seconds
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 2000);
+    
+  }, 1000); // Simulate network delay
+});
+</script>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us: +254758962299 | bitehappinessina@gmail.com</p>
+    <p>Follow us on Instagram &amp; Facebook</p>
+    <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
+  </footer>
+
+  <script>
+  </script>
+</body>
+</html>

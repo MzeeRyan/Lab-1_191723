@@ -1,38 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
     <title>Gallery - Happiness in a Bite</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+        <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo" />
         <h1>Gallery</h1>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <main>
         <section class="gallery-section">
             <h2 class="section-title">Our Delicious Creations</h2>
-            <div class="gallery-grid">
-                <img src="images/The Only Cinnamon Rolls You Will Ever Need.jpeg" alt="Cinnamon rolls" class="gallery-img">
-                <img src="images/Delicious Orange Muffins Recipe.jpeg" alt="orange muffins" class="gallery-img">
-                <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="chocolate chip cookies" class="gallery-img">
-                <img src="images/Chocolate Cinnamon Rolls [130 Minutes].jpeg" alt="Chocolate Cinnamon rolls" class="gallery-img">
-                <img src="images/Private Site.jpeg" alt="Lemon and Lime Muffins" class="gallery-img">
-                <img src="images/Easy Blueberry Muffins Recipe - dailyrecipestips_com.jpeg" alt="Blueberry MUffins" class="gallery-img">
-                <img src="images/Coconut and Pineapple Cottage Cheese Muffins - skilledcooks.jpeg" alt="Pineaple and Coconut Muffins" class="gallery-img">
-                <img src="images/Easy White Chocolate Chip Muffins.jpeg" alt="White chocolate Muffins" class="gallery-img">
-                <img src="images/Bakery Style Vanilla Muffins with Oil.jpeg" alt="Vanilla Muffins" class="gallery-img">
-                <img src="images/Buttermilk Raspberry Muffins - Dessert Hungry.jpeg" alt="Raspberry Muffins" class="gallery-img">
-                <img src="images/Strawberry Coffee Cake Muffins.jpeg" alt="Strawberry Muffins" class="gallery-img">
+            <div class="gallery-grid" role="list">
+                <img src="images/The Only Cinnamon Rolls You Will Ever Need.jpeg" alt="Cinnamon rolls" class="gallery-img" role="listitem" />
+                <img src="images/Delicious Orange Muffins Recipe.jpeg" alt="Orange muffins" class="gallery-img" role="listitem" />
+                <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="Chocolate chip cookies" class="gallery-img" role="listitem" />
+                <img src="images/Chocolate Cinnamon Rolls [130 Minutes].jpeg" alt="Chocolate cinnamon rolls" class="gallery-img" role="listitem" />
+                <img src="images/Private Site.jpeg" alt="Lemon and lime muffins" class="gallery-img" role="listitem" />
+                <img src="images/Easy Blueberry Muffins Recipe - dailyrecipestips_com.jpeg" alt="Blueberry muffins" class="gallery-img" role="listitem" />
+                <img src="images/Coconut and Pineapple Cottage Cheese Muffins - skilledcooks.jpeg" alt="Pineapple and coconut muffins" class="gallery-img" role="listitem" />
+                <img src="images/Easy White Chocolate Chip Muffins.jpeg" alt="White chocolate muffins" class="gallery-img" role="listitem" />
+                <img src="images/Bakery Style Vanilla Muffins with Oil.jpeg" alt="Vanilla muffins" class="gallery-img" role="listitem" />
+                <img src="images/Buttermilk Raspberry Muffins - Dessert Hungry.jpeg" alt="Raspberry muffins" class="gallery-img" role="listitem" />
+                <img src="images/Refreshing Ginger Mint Lemonade.jpeg" alt="Ginger mint lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Strawberry Basil Lemonade [20 Minutes].jpeg" alt="Strawberry basil lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Strawberry Rose Lemonade Mocktail.jpeg" alt="Strawberry rose lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Peach Lemonade Recipe -.jpeg" alt="Peach lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Easy Cucumber Lemonade.jpeg" alt="Cucumber lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Mango Lemonade.jpeg" alt="Mango lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Mint Lemonade.jpeg" alt="Mint lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Easy Pineapple Lemonade.jpeg" alt="Pineapple lemonade" class="gallery-img" role="listitem" />
+                <img src="images/Lemon Glaze Loaf.jpeg" alt="Lemon loaf cake" class="gallery-img" role="listitem" />
+                <img src="images/Orange loaf cake.jpeg" alt="Orange loaf cake" class="gallery-img" role="listitem" />
+                <img src="images/Easy Homemade Carrot Bread.jpeg" alt="Carrot loaf cake" class="gallery-img" role="listitem" />
+                <img src="images/Sticky maple and pecan cinnamon rolls (1).jpeg" alt="Sticky maple and pecan cinnamon rolls" class="gallery-img" role="listitem" />
             </div>
         </section>
     </main>

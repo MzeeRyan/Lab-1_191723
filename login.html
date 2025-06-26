@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Happiness in a Bite</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+    <h1>Welcome Back!</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    
+    <!-- Authentication Section -->
+    <div class="nav-auth">
+      <!-- Show ONLY when user is logged OUT -->
+      <div class="nav-login">
+        <a href="login.html">Login</a>
+      </div>
+      
+      <!-- Show ONLY when user is logged IN -->
+      <div class="user-profile">
+        <div class="profile-icon">👤</div>
+        <div class="profile-dropdown">
+          <a href="account.html">My Orders</a>
+          <a href="settings.html">Account Settings</a>
+          <a href="logout.html">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="login-container">
+      <h2>Login to Your Account</h2>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="password-container">
+            <input type="password" id="login-password" name="password" required>
+            <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+          </div>
+          <div class="strength-meter">
+            <div class="strength-meter-fill"></div>
+          </div>
+        </div>
+        
+        <div class="form-options">
+          <label>
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a href="forgot-password.html" class="text-link">Forgot password?</a>
+        </div>
+
+        <!-- Social Login Section -->
+        <div class="social-login">
+          <p class="divider"><span>or continue with</span></p>
+          <div class="social-buttons">
+            <button type="button" class="social-btn google">
+              <img src="icons/google.svg" alt="Google"> Google
+            </button>
+            <button type="button" class="social-btn facebook">
+              <img src="icons/facebook.svg" alt="Facebook"> Facebook
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="cta-button">Sign In</button>
+      </form>
+      
+      <div class="login-footer">
+        <p>New customer? <a href="register.html" class="text-link">Create an account</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us: 0758-962-299 | happinessinabite@gmail.com</p>
+    <p>Follow us on Instagram &amp; Facebook</p>
+    <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Password toggle functionality
+    function togglePassword(fieldId) {
+      const field = document.getElementById(fieldId);
+      field.type = field.type === 'password' ? 'text' : 'password';
+    }
+
+    // Cookie functions
+    function setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+    }
+
+    // Check for existing cookie on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookies = document.cookie.split(';');
+      const rememberCookie = cookies.find(c => c.includes('remember_login'));
+      
+      if (rememberCookie) {
+        const email = rememberCookie.split('=')[1];
+        document.getElementById('login-email').value = email;
+        document.querySelector('input[name="remember"]').checked = true;
+      }
+    });
+
+    // Form submission handler
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      const remember = document.querySelector('input[name="remember"]').checked;
+      
+      if (remember) {
+        setCookie('remember_login', email, 30); // Remember for 30 days
+      } else {
+        document.cookie = 'remember_login=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      }
+      
+      if(email && password) {
+        alert('Login successful! Redirecting...');
+        // window.location.href = 'account.html'; // Uncomment for actual redirect
+      } else {
+        alert('Please fill in all fields');
+      }
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
+  
+  // Simulate login validation
+  const users = JSON.parse(localStorage.getItem('users') || '[]');
+  const userExists = users.some(user => user.email === email && user.password === password);
+  
+  if(userExists) {
+    // Show loading state
+    const submitBtn = document.querySelector('#loginForm button[type="submit"]');
+    submitBtn.textContent = 'Logging in...';
+    submitBtn.disabled = true;
+    
+    // Store login state
+    localStorage.setItem('currentUser', JSON.stringify(users.find(user => user.email === email)));
+    localStorage.setItem('isLoggedIn', 'true');
+    
+    // Redirect after 1 second
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1000);
+  } else {
+    alert('Invalid credentials. Please try again.');
+  }
+});
+  </script>
+</body>
+</html>

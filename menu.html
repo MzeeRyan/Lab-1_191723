@@ -1,120 +1,312 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Our Menu - Happiness in a Bite</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header>
-    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo" />
     <h1>Our Menu</h1>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <main>
-    <section class="menu-grid">
-        <div class="menu-item">
-            <img src="images/The Only Cinnamon Rolls You Will Ever Need.jpeg" alt="Original Cinnamon Rolls">
+    <section aria-label="Baked Goods Menu">
+        <h2>Our Pastries</h2>
+        <div class="menu-grid">
+            <article class="menu-item">
+            <img src="images/The Only Cinnamon Rolls You Will Ever Need.jpeg" alt="Original Cinnamon Rolls" />
             <h2>Cinnamon Rolls</h2>
-            <p>Warm, gooey, and fresh from the oven</p>
+            <p>Warm, gooey, and fresh from the oven.</p>
             <p class="price">KES 200</p>
-            <a href="order.html?item=Original Cinnamon rolls"><button>Order</button></a>
-        </div>
+            <a href="order.html?item=Original Cinnamon Rolls"><button>Order</button></a>
+        </article>
 
-        <div class="menu-item">
-            <img src="images/Delicious Orange Muffins Recipe.jpeg" alt="Orange Muffins">
-            <h2>Orange Muffins</h2>
-            <p>Made with fresh pulp and the best orange juice</p>
-            <p class="price">KES 150</p>
-            <a href="order.html?item=Orange Muffins"><button>Order</button></a>
-        </div>
+        <article class="menu-item">
+            <img src="images/Sticky maple and pecan cinnamon rolls (1).jpeg" alt="Sticky Maple Pecan Cinnamon Rolls" />
+            <h2>Sticky Maple Pecan Cinnamon Rolls</h2>
+            <p>A rich and sticky swirl of cinnamon, drizzled with golden maple syrup and topped with crunchy roasted pecans for the perfect sweet and nutty indulgence.</p>
+            <p class="price">KES 200</p>
+            <a href="order.html?item=Sticky Maple Pecan Cinnamon Rolls"><button>Order</button></a>
+        </article>
 
-        <div class="menu-item">
-            <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="Chocolate Chip Cookies">
-            <h2>Chocolate Chip Cookies</h2>
-            <p>Crunchy edges, soft center</p>
-            <p class="price">KES 100</p>
-            <a href="order.html?item=Chocolate chip Cookies"><button>Order</button></a>
-        </div>
-
-        <div class="menu-item">
-            <img src="images/Chocolate Cinnamon Rolls [130 Minutes].jpeg" alt="Chocolate Cinnamon Rolls">
+        <article class="menu-item">
+            <img src="images/Chocolate Cinnamon Rolls [130 Minutes].jpeg" alt="Chocolate Cinnamon Rolls" />
             <h2>Chocolate Cinnamon Rolls</h2>
-            <p>Gooey rolls with warm chocolate dripping off</p>
+            <p>Gooey rolls with warm chocolate dripping off.</p>
             <p class="price">KES 200</p>
-            <a href="order.html?item=Chocolate cinnamon Muffins"><button>Order</button></a>
-        </div>
+            <a href="order.html?item=Chocolate Cinnamon Rolls"><button>Order</button></a>
+        </article>
 
-        <div class="menu-item">
-            <img src="images/Private Site.jpeg" alt="Lemon and Lime Muffins">
-            <h2>Lemon and Lime Muffins</h2>
-            <p>A perfect blend of sweet and tangy in one delightful dessert</p>
-            <p class="price">KES 150</p>
-            <a href="order.html?item=Lemon and Lime Muffins"><button>Order</button></a>
-        </div>
-
-        <div class="menu-item">
-            <img src="images/Easy Blueberry Muffins Recipe - dailyrecipestips_com.jpeg" alt="Blueberry Muffins">
-            <h2>Blueberry Muffins</h2>
-            <p>Soft and fluffy with blueberries in every bite</p>
+        <article class="menu-item">
+            <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="Chocolate Chip Cookies" />
+            <h2>Chocolate Chip Cookies</h2>
+            <p>Crunchy edges, soft center.</p>
             <p class="price">KES 100</p>
-            <a href="order.html?item=Blueberry Muffins"><button>Order</button></a>
-        </div>
+            <a href="order.html?item=Chocolate Chip Cookies"><button>Order</button></a>
+        </article>
 
-        <div class="menu-item">
-            <img src="images/Coconut and Pineapple Cottage Cheese Muffins - skilledcooks.jpeg" alt="Pineale coconut Muffins">
-            <h2>Pineaple Coconut Muffins</h2>
-            <p>Packs a punch of coastal flavours all in one muffin</p>
-            <p class="price">KES 150</p>
-            <a href="order.html?item=Pineaple Coconut Muffins"><button>Order</button></a>
-        </div>
-
-        <div class="menu-item">
-            <img src="images/Easy White Chocolate Chip Muffins.jpeg" alt="White chocolate Muffins">
-            <h2>White chocolate Muffins</h2>
-            <p>Have a bite of pure sweetness as you get a taste of the whie chocolate.</p>
-            <p class="price">KES 150</p>
-            <a href="order.html?item=Chocolate chip Muffins"><button>Order</button></a>
-        </div>
-
-        <div class="menu-item">
-            <img src="images/Buttermilk Raspberry Muffins - Dessert Hungry.jpeg" alt="Raspberry Muffins">
-            <h2>Raspberry Muffins</h2>
-            <p>A sweet and tangy muffin bursting with juicy raspberry fruit flavour.</p>
-            <p class="price">KES 150</p>
-            <a href="order.html?item=Raspberry Muffins"><button>Order</button></a>
-        </div>
-
-        <div class="menu-item">
-            <img src="images/Bakery Style Vanilla Muffins with Oil.jpeg" alt="Vanilla Muffins">
+        <article class="menu-item">
+            <img src="images/Bakery Style Vanilla Muffins with Oil.jpeg" alt="Vanilla Muffins" />
             <h2>Vanilla Muffins</h2>
-            <p>A soft,fluffy muffin with rich vanilla aroma and classis taste</p>
-            <p class="price">KES 150</p>
+            <p>A soft, fluffy muffin with rich vanilla aroma and classic taste.</p>
+            <p class="price">KES 180</p>
             <a href="order.html?item=Vanilla Muffins"><button>Order</button></a>
-        </div>
+        </article>
 
-        <div class="menu-item">
-            <img src="images/Strawberry Coffee Cake Muffins.jpeg" alt="Strawberry Muffins">
+        <article class="menu-item">
+            <img src="images/Vanilla Pound Cake Recipe.jpeg" alt="Vanilla Loaf Cake" />
+            <h2>Vanilla Loaf Cake</h2>
+            <p>A soft, buttery loaf with a rich vanilla aroma and tender crumb — simple, elegant, and timelessly delicious.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Vanilla Loaf Cake"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Passionfruit Cupcakes.jpeg" alt="Passion Vanilla Muffins" />
+            <h2>Passion Vanilla Muffins</h2>
+            <p>A soft, fluffy muffin infused with tropical passion fruit and warm vanilla notes — a sweet escape in every bite.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Passion Vanilla Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Private Site.jpeg" alt="Lemon and Lime Muffins" />
+            <h2>Lemon and Lime Muffins</h2>
+            <p>A perfect blend of sweet and tangy in one delightful dessert.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Lemon and Lime Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Lemon Glaze Loaf.jpeg" alt="Lemon Loaf Cake" />
+            <h2>Lemon Loaf Cake</h2>
+            <p>A moist, buttery loaf bursting with zesty lemon flavor and finished with a light citrus glaze for a refreshing treat.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Lemon Loaf Cake"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Delicious Orange Muffins Recipe.jpeg" alt="Zesty Orange Muffins" />
+            <h2>Zesty Orange Muffins</h2>
+            <p>Made with fresh pulp and the best orange juice.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Zesty Orange Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Orange loaf cake.jpeg" alt="Orange Loaf Cake" />
+            <h2>Orange Loaf Cake</h2>
+            <p>Soft and tender with a bright burst of fresh orange zest, this loaf cake is sunshine in every slice.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Orange Loaf Cake"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Coconut and Pineapple Cottage Cheese Muffins - skilledcooks.jpeg" alt="Pineapple Coconut Muffins" />
+            <h2>Pineapple Coconut Muffins</h2>
+            <p>Packs a punch of coastal flavors all in one muffin.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Pineapple Coconut Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Easy White Chocolate Chip Muffins.jpeg" alt="White Chocolate Muffins" />
+            <h2>White Chocolate Muffins</h2>
+            <p>Have a bite of pure sweetness as you get a taste of the white chocolate.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=White Chocolate Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Chocolate Chip Muffin Recipe.jpeg" alt="Chocolate Chip Muffins" />
+            <h2>Chocolate Chip Muffins</h2>
+            <p>Golden muffins with a soft, fluffy center packed with rich chocolate chips in every bite — a classic comfort treat.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Chocolate Chip Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="Chocolate Chip Cookies" />
+            <h2>Chocolate Chip Cookies</h2>
+            <p>Crunchy edges, soft center.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Chocolate Chip Cookies"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Buttermilk Raspberry Muffins - Dessert Hungry.jpeg" alt="Raspberry Muffins" />
+            <h2>Raspberry Muffins</h2>
+            <p>A sweet and tangy muffin bursting with juicy raspberry fruit flavor.</p>
+            <p class="price">KES 200</p>
+            <a href="order.html?item=Raspberry Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Lemon Raspberry Muffins.jpeg" alt="Raspberry and Lemon Muffins" />
+            <h2>Raspberry and Lemon Muffins</h2>
+            <p>A zesty burst of lemon meets the sweet-tart pop of juicy raspberries in these soft, golden muffins — vibrant, fresh, and full of flavor.</p>
+            <p class="price">KES 200</p>
+            <a href="order.html?item=Raspberry and Lemon Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Strawberry Coffee Cake Muffins.jpeg" alt="Strawberry Muffins" />
             <h2>Strawberry Muffins</h2>
             <p>Moist muffin filled with fresh strawberries, perfect for fruity indulgence.</p>
-            <p class="price">KES 150</p>
+            <p class="price">KES 180</p>
             <a href="order.html?item=Strawberry Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Easy Blueberry Muffins Recipe - dailyrecipestips_com.jpeg" alt="Blueberry Muffins" />
+            <h2>Blueberry Muffins</h2>
+            <p>Soft and fluffy with blueberries in every bite.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Blueberry Muffins"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Easy Homemade Carrot Bread.jpeg" alt="Carrot Loaf Cake" />
+            <h2>Carrot Loaf Cake</h2>
+            <p>A moist and spiced loaf cake made with freshly grated carrots, warm cinnamon, and a hint of vanilla — comforting and delicious in every slice.</p>
+            <p class="price">KES 600</p>
+            <a href="order.html?item=Carrot Loaf Cake"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Double Chocolate Blueberry Muffins - The Missing Lokness.jpeg" alt="Chocolate Blueberry Muffins" />
+            <h2>Chocolate Blueberry Muffins</h2>
+            <p>Soft and fluffy muffins bursting with juicy blueberries and rich chocolate chips.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Chocolate Blueberry Muffins"><button>Order</button></a>
+        </article>
         </div>
+    </section>
+
+    <section aria-label="Drinks Menu">
+    <h2>Our Drinks</h2>
+    <div class="menu-grid">
+        <article class="menu-item">
+            <img src="images/Blueberry Lavender Lemonade.jpeg" alt="Blueberry Lavender Lemonade" />
+            <h2>Blueberry Lavender lemonade</h2>
+            <p>A soothing mix of blueberry and a hint of lavender — floral, fruity, and calming.</p>
+            <p class="price">KES 50</p>
+            <a href="order.html?item=Blueberry Lavender Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Blueberry Lemonade (with Homemade Blueberry Syrup).jpeg" alt="Blueberry Lemonade" />
+            <h2>Blueberry Lemonade</h2>
+            <p>A vibrant blend of tangy lemonade and sweet blueberries for a refreshing twist..</p>
+            <p class="price">KES 50</p>
+            <a href="order.html?item=Blueberry Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Easy Cucumber Lemonade.jpeg" alt="Cucumber Lemonade" />
+            <h2>Cucumber lemonade</h2>
+            <p>Cool and crisp, this hydrating lemonade features fresh cucumber for a spa-like sip</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Cucumber Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Easy Pineapple Lemonade.jpeg" alt="Pineapple Lemonade" />
+            <h2>Pineapple lemmonade</h2>
+            <p>Tropical and tangy with juicy pineapple that adds a sunny burst of flavor.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Pineapple Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Mango Lemonade.jpeg" alt="Mango Lemonade" />
+            <h2>Mango Lemonade</h2>
+            <p>Smooth and exotic — ripe mango meets citrus zing in this summer-perfect drink.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Mango Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Mint Lemonade.jpeg" alt="Mint Lemonade" />
+            <h2>Mint Lemonade</h2>
+            <p>A bright and cooling combo of zesty lemons and garden-fresh mint.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Mint Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Refreshing Ginger Mint Lemonade.jpeg" alt="Ginger mint Lemonade" />
+            <h2>Ginger Mint Lemonade</h2>
+            <p>A bold fusion of spicy ginger and refreshing mint in a citrusy base.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Ginger Mint Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Strawberry Basil Lemonade [20 Minutes].jpeg" alt="Strawberry Basil Lemonade" />
+            <h2>Strawberry Basil Lemonade</h2>
+            <p>Sweet strawberries and aromatic basil give this lemonade a unique, gourmet vibe.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Strawberry Basil Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Strawberry Rose Lemonade Mocktail.jpeg" alt="Strawberry Rose Lemonade" />
+            <h2>Strawberry Rose Lemonade</h2>
+            <p>Floral and fruity, this delicate blend of strawberries and rosewater is pure elegance.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Strawberry Rose Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Watermelon Mint Lemonade [20 Minutes].jpeg" alt="Watermelon mint lemonade" />
+            <h2>Watermelon Mint Lemonade</h2>
+            <p>Juicy watermelon and cool mint make this a light, refreshing thirst-quencher.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Watermelon Mint Lemonade"><button>Order</button></a>
+        </article>
+
+        <article class="menu-item">
+            <img src="images/Peach Lemonade Recipe -.jpeg" alt="Peach Lemonade" />
+            <h2>Peach Lemonade</h2>
+            <p>Sweet, juicy peaches add a soft and luscious touch to this classic lemonade.</p>
+            <p class="price">KES 150</p>
+            <a href="order.html?item=Peach Lemonade"><button>Order</button></a>
+        </article>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
+    <p>© 2025 Happiness in a Bite. All rights reserved.</p>
 </footer>
 </body>
 </html>

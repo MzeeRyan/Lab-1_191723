@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Happiness in a Bite</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header>
-    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo" />
     <h1>Welcome to Happiness in a Bite</h1>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
-    <section class="hero">
-        <h2>Spreading Joy, One Bite at a Time</h2>
-        <p>Delicious homemade creations baked with love and care.</p>
-        <a href="menu.html" class="cta-button">Explore Our Menu</a>
-    </section>
+<section class="hero">
+    <h2>Spreading Joy, One Bite at a Time</h2>
+    <p>Delicious homemade creations baked with love and care.</p>
+    <a href="menu.html" class="cta-button">Explore Our Menu</a>
+</section>
 
 <main>
     <section class="intro">
         <p>
-            At Happiness in a Bite, we believe that every treat should be a celebration. Our delicious homemade creations
-            are baked with love, care, and the finest ingredients to bring a little extra joy to your day. Whether you're
-            indulging in a sweet craving or sharing with someone special, every bite is a reminder that happiness truly
-            can be found in the smallest moments.
+            At Happiness in a Bite, we believe that every treat should be a celebration.
+            Our delicious homemade creations are baked with love, care, and the finest ingredients
+            to bring a little extra joy to your day. Whether you're indulging in a sweet craving
+            or sharing with someone special, every bite is a reminder that happiness truly can
+            be found in the smallest moments.
         </p>
     </section>
 
@@ -40,44 +58,59 @@
         <h2>Our Best Sellers</h2>
         <div class="products">
             <div class="product-card">
-                <h3>Cinnamon rolls</h3>
-                <p>Rich, moist, and unforgettable.</p>
-                <a href="order.html" class="cta-button">Order Now</a>
-            </div>
+<article class="menu-item">
+                <article class="menu-item">
+            <img src="images/Buttermilk Raspberry Muffins - Dessert Hungry.jpeg" alt="Raspberry Muffins" />
+            <h2>Raspberry Muffins</h2>
+            <p>A sweet and tangy muffin bursting with juicy raspberry fruit flavor.</p>
+            <p class="price">KES 200</p>
+            <a href="order.html?item=Raspberry Muffins"><button>Order</button></a>
+        </article>               
             <div class="product-card">
-                <h3>Orange Muffins</h3>
-                <p>Sweet, soft, and filled with joy.</p>
-                <a href="order.html" class="cta-button">Order Now</a>
-            </div>
+                <article class="menu-item">
+            <img src="images/Delicious Orange Muffins Recipe.jpeg" alt="Zesty Orange Muffins" />
+            <h2>Zesty Orange Muffins</h2>
+            <p>Made with fresh pulp and the best orange juice.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Zesty Orange Muffins"><button>Order</button></a>
+        </article> 
             <div class="product-card">
-                <h3>Lemon and Lemon muffins</h3>
-                <p>Elegant flavor in every bite.</p>
-                <a href="order.html" class="cta-button">Order Now</a>
-            </div>
+               <article class="menu-item">
+            <img src="images/Private Site.jpeg" alt="Lemon and Lime Muffins" />
+            <h2>Lemon and Lime Muffins</h2>
+            <p>A perfect blend of sweet and tangy in one delightful dessert.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Lemon and Lime Muffins"><button>Order</button></a>
+        </article>
             <div class="product-card">
-                <h3>Lemon and Lemon muffins</h3>
-                <p>Elegant flavor in every bite.</p>
-                <a href="order.html" class="cta-button">Order Now</a>
-            </div>
+                <article class="menu-item">
+            <img src="images/Easy Blueberry Muffins Recipe - dailyrecipestips_com.jpeg" alt="Blueberry Muffins" />
+            <h2>Blueberry Muffins</h2>
+            <p>Soft and fluffy with blueberries in every bite.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Blueberry Muffins"><button>Order</button></a>
+        </article>
             <div class="product-card">
-                <h3>Lemon and Lemon muffins</h3>
-                <p>Elegant flavor in every bite.</p>
-                <a href="order.html" class="cta-button">Order Now</a>
-            </div>
+                <article class="menu-item">
+            <img src="images/Chewy Chocolate Chip Cookies.jpeg" alt="Chocolate Chip Cookies" />
+            <h2>Chocolate Chip Cookies</h2>
+            <p>Crunchy edges, soft center.</p>
+            <p class="price">KES 180</p>
+            <a href="order.html?item=Chocolate Chip Cookies"><button>Order</button></a>
+        </article>
         </div>
     </section>
 
     <section class="section cta">
         <h2>Ready to taste happiness?</h2>
-        <a href="order.html" class="cta-button">Place Your Order</a>
+        <a href="order.html?item=Chocolate Chip Cookies"><button>Place Your Order</button></a>
     </section>
 </main>
 
 <footer>
     <p>Contact us: +254758962299 | bitehappinessina@gmail.com</p>
-    <p>Follow us on Instagram & Facebook</p>
+    <p>Follow us on Instagram &amp; Facebook</p>
     <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
 </footer>
-
 </body>
 </html>

@@ -9,7 +9,7 @@
 <body>
 
 <header>
-  <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
+  <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo" />
   <h1>Place Your Order</h1>
 </header>
 
@@ -19,51 +19,129 @@
   <a href="menu.html">Menu</a>
   <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <main class="section">
   <h2>Let's Bake Something Special!</h2>
-  <form action="https://formspree.io/f/yourformid" method="POST" class="order-form">
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+  <form action="https://formspree.io/f/yourformid" method="POST" class="order-form" id="orderForm">
+  
+    <label for="name">Full Name:</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
 
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" required><br><br>
+    <label for="phone">Phone Number:</label><br />
+    <input type="tel" id="phone" name="phone" required placeholder="07XXXXXXXX or 2547XXXXXXXX" />
+    <div id="phoneError" class="error"></div><br />
 
-    <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+    <label for="email">Email Address:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
 
-    <label for="product">Select Product:</label><br>
+    <label for="dob">Date of Birth:</label><br />
+    <input type="date" id="dob" name="dob" required />
+    <div id="dobError" class="error"></div><br />
+
+    <label for="age">Age:</label><br />
+    <input type="number" id="age" name="age" min="18" required readonly /><br /><br />
+
+    <label for="username">Username:</label><br />
+    <input type="text" id="username" name="username" required />
+    <div id="usernameError" class="error"></div><br />
+
+    <label for="password">Password:</label>
+    <div class="password-container">
+      <input type="password" id="password" name="password" required />
+      <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+    </div>
+    <div class="strength-meter">
+      <div id="strength-meter-fill" class="strength-meter-fill"></div>
+    </div>
+    <div id="passwordError" class="error"></div><br />
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <div class="password-container">
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+      <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+    </div>
+    <div id="confirmPasswordError" class="error"></div><br />
+
+    <label for="accountType">Account Type:</label><br />
+    <select id="accountType" name="accountType" required>
+      <option value="">--Select--</option>
+      <option value="customer">Customer</option>
+      <option value="wholesale">Wholesale Buyer</option>
+      <option value="corporate">Corporate Client</option>
+    </select><br /><br />
+
+    <label for="product">Select Product:</label><br />
     <select id="product" name="product" required>
       <option value="">--Please choose--</option>
       <option value="Original Cinnamon rolls">Original Cinnamon rolls</option>
       <option value="Orange Muffins">Orange Muffins</option>
-      <option value=" Raspberry Muffins">Raspberry Muffins</option>
+      <option value="Raspberry Muffins">Raspberry Muffins</option>
       <option value="Blueberry Muffins">Blueberry Muffins</option>
-      <option value="Pineaple and Coconut Muffins">Pineaple and Coconut Muffins</option>
+      <option value="Pineapple and Coconut Muffins">Pineapple and Coconut Muffins</option>
       <option value="Vanilla Muffins">Vanilla Muffins</option>
-      <option value="Orange Muffins">Orange Muffins</option>
-      <option value="White chocolate Chip Muffins">White Chocolate chip Muffins</option>
-      <option value="Chocolate Chip cookies">Lemon and Lime Muffins</option>
+      <option value="Zesty Orange Muffins">Zesty Orange Muffins</option>
+      <option value="White Chocolate Chip Muffins">White Chocolate Chip Muffins</option>
+      <option value="Lemon and Lime Muffins">Lemon and Lime Muffins</option>
       <option value="Chocolate Cinnamon rolls">Chocolate Cinnamon rolls</option>
+      <option value="Strawberry Lemonade">Strawberry Lemonade</option>
+      <option value="Blueberry Lemonade">Blueberry Lemonade</option>
+      <option value="Mango Lemonade">Mango Lemonade</option>
+      <option value="Watermelon Lemonade">Watermelon Lemonade</option>
+      <option value="Pineapple Lemonade">Pineapple Lemonade</option>
+      <option value="Blueberry Lavender Lemonade">Blueberry Lavender Lemonade</option>
+      <option value="Cucumber Lemonade">Cucumber Lemonade</option>
+      <option value="Strawberry Rose Lemonade">Strawberry Rose Lemonade</option>
+      <option value="Mint Lemonade">Mint Lemonade</option>
+      <option value="Ginger Lemonade">Ginger Lemonade</option>
       <option value="Custom Order">Custom Order</option>
-    </select><br><br>
+    </select><br /><br />
 
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+    <label for="quantity">Quantity:</label><br />
+    <input type="number" id="quantity" name="quantity" min="1" required /><br /><br />
 
-    <label for="message">Special Requests or Notes:</label><br>
-    <textarea id="message" name="message" rows="4" placeholder="E.g. I need it delivered on Friday morning."></textarea><br><br>
+    <label for="message">Special Requests or Notes:</label><br />
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="E.g. I need it delivered on Friday morning."
+    ></textarea><br /><br />
 
     <button type="submit" class="cta-button">Submit Order</button>
   </form>
 
-  <p>Prefer WhatsApp? <a href="https://wa.me/254758962299?text=Hi!%20I'd%20like%20to%20place%20an%20order%20from%20Happiness%20in%20a%20Bite" class="cta-button">Order via WhatsApp</a></p>
+  <p>
+    Prefer WhatsApp?
+    <a
+      href="https://wa.me/254758962299?text=Hi!%20I'd%20like%20to%20place%20an%20order%20from%20Happiness%20in%20a%20Bite"
+      class="cta-button"
+      >Order via WhatsApp</a
+    >
+  </p>
 </main>
 
 <footer>
   <p>Contact us: 0758-962-299 | happinessinabite@gmail.com</p>
-  <p>Follow us on Instagram & Facebook</p>
+  <p>Follow us on Instagram &amp; Facebook</p>
   <p>&copy; 2025 Happiness in a Bite. All rights reserved.</p>
 </footer>
 

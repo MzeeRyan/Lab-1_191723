@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Us - Happiness in a Bite</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Happiness in a Bite</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo">
-        <h1>About Us</h1>
-    </header>
+  <header>
+    <img src="logo.jpg" alt="Happiness in a Bite Logo" class="logo" />
+    <h1>About Us</h1>
+  </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  
+  <!-- Authentication Section -->
+  <div class="nav-auth">
+    <!-- Show ONLY when user is logged OUT -->
+    <div class="nav-login">
+      <a href="login.html">Login</a>
+    </div>
+    
+    <!-- Show ONLY when user is logged IN -->
+    <div class="user-profile">
+      <div class="profile-icon">👤</div>
+      <div class="profile-dropdown">
+        <a href="account.html">My Orders</a>
+        <a href="settings.html">Account Settings</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <main>
-        <section id="about-us" class="about-section">
-            <h2 class="section-title">About Us</h2>
-            <p>
-                <strong>Happiness in a Bite</strong> is a homegrown bakery founded with love and a passion for creating sweet moments. Since our first batch, we’ve believed that every bite should bring joy — and that’s exactly what we bake into every treat.
-            </p>
+  <main>
+    <section id="about-us" class="about-section">
+      <h2 class="section-title">About Us</h2>
+      <p>
+        <strong>Happiness in a Bite</strong> is a homegrown bakery founded with love and a passion for creating sweet moments. Since our first batch, we’ve believed that every bite should bring joy — and that’s exactly what we bake into every treat.
+      </p>
 
-            <h3 class="subheading">Our Mission</h3>
-            <p>
-                To deliver homemade goodness that warms hearts, sparks smiles, and turns ordinary days into celebrations.
-            </p>
+      <h3 class="subheading">Our Mission</h3>
+      <p>
+        To deliver homemade goodness that warms hearts, sparks smiles, and turns ordinary days into celebrations.
+      </p>
 
-            <h3 class="subheading">Our Vision</h3>
-            <p>
-                To become a household name in Kenya and beyond, known for quality, creativity, and a sprinkle of love in every bite.
-            </p>
+      <h3 class="subheading">Our Vision</h3>
+      <p>
+        To become a household name in Kenya and beyond, known for quality, creativity, and a sprinkle of love in every bite.
+      </p>
 
-            <h3 class="subheading">Our Values</h3>
-            <ul>
-                <li>Passion for baking</li>
-                <li>Quality ingredients</li>
-                <li>Customer delight</li>
-                <li>Consistency & innovation</li>
-            </ul>
+      <h3 class="subheading">Our Values</h3>
+      <ul>
+        <li>Passion for baking</li>
+        <li>Quality ingredients</li>
+        <li>Customer delight</li>
+        <li>Consistency &amp; innovation</li>
+      </ul>
 
-            <h3 class="subheading">Why Choose Us?</h3>
-            <p>
-                From custom cakes to freshly baked cookies and cupcakes, we pour our hearts into every recipe. Whether it's a birthday, wedding, or just a sweet craving — <em>Happiness in a Bite</em> is your go-to bakery for unforgettable treats.
-            </p>
+      <h3 class="subheading">Why Choose Us?</h3>
+      <p>
+        From custom cakes to freshly baked cookies and cupcakes, we pour our hearts into every recipe. Whether it's a birthday, wedding, or just a sweet craving — <em>Happiness in a Bite</em> is your go-to bakery for unforgettable treats.
+      </p>
 
-            <p>
-                Want to taste the joy? <a href="#contact" class="contact-link">Get in touch with us today!</a>
-            </p>
-        </section>
-    </main>
+      <p>
+        Want to taste the joy? <a href="contact.html" class="contact-link">Get in touch with us today!</a>
+      </p>
+    </section>
+  </main>
 </body>
 </html>
